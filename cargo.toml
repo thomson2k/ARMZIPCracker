@@ -1,0 +1,15 @@
+[package]
+name = "ARMZIPCracker"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+wgpu = "0.17"       # GPU compute library
+zip = "0.6"         # For handling ZIP files
+anyhow = "1.0"      # For error handling
+tokio = { version = "1", features = ["full"] } # For async tasks
+rayon = "1.7"       # For multithreading (fallback option)
+
+[profile.release]
+# Optimize for speed in release builds
+opt-level = 3
